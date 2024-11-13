@@ -25,9 +25,24 @@ We use the VLM Zoo in LOVM (originally consisting of 35 models). To increase the
 After download the expert_knowledge.zip file, you need to unzip this file in `./model` to get the folder `./model/checkpoint`.
 
 ### 🔎 Dataset
-We use the 23 datasets employed in the LOVM Benchmark. We provide download links for the corresponding datasets. Download link: [link](https://1drv.ms/u/c/211d179501129eff/Ee0bf7DKebRDlUb-KF5suXoBwYnz88N9q8WWlcbGyBMlNg?e=E5RqjB)
+We use the 23 datasets employed in the LOVM Benchmark. Since the ImageNet dataset is large, we provide the download link for other datasets aside from ImageNet-1k. Download link: [link](https://1drv.ms/u/c/211d179501129eff/Ee0bf7DKebRDlUb-KF5suXoBwYnz88N9q8WWlcbGyBMlNg?e=E5RqjB)
 
-After download the datasets.zip file, you need to unzip this file in `./data` to get the folder `./data/datasets`.
+For ImageNet-1K, you can download it from the official ImageNet website ([link](https://image-net.org/download.php)) and organize the dataset into the following folder structure:
+```
+│imagenet/
+├──train/
+│  ├── n01440764
+│  │   ├── n01440764_18.JPEG
+│  │   ├── ......
+│  ├── ......
+├──val/
+│  ├── n01440764
+│  │   ├── ILSVRC2012_val_00000293.JPEG
+│  │   ├── ......
+│  ├── ......
+```
+
+After download the datasets.zip file, you need to unzip this file in `./data` to get the folder `./data/datasets`. The `imagenet` folder should also be placed under `./data/datasets`.
 
 ### 🔎 PTM(Pre-Trained Model)'s Statistics
 You can run the following code to calculate the task relation and the statistics (such as the class-level accuracy of VLMs, Modality Gap Vector, etc.) of VLMs on various datasets.
